@@ -3,17 +3,13 @@
 
 
 
-/*=============================================
-	=          Data Background               =
-=============================================*/
+//  Data Background 
 $("[data-background]").each(function () {
 	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
 })
 
 
-/*=============================================
-	=    		Mobile Menu			      =
-=============================================*/
+// Mobile Menu	
 //SubMenu Dropdown Toggle
 if ($('.menu-area li.menu-item-has-children ul').length) {
 	$('.menu-area .navigation li.menu-item-has-children').append('<div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>');
@@ -40,10 +36,7 @@ if ($('.mobile-menu').length) {
 	});
 }
 
-
-/*=============================================
-	=     Menu sticky & Scroll to top      =
-=============================================*/
+// Menu sticky & Scroll to top  
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
 	if (scroll < 245) {
@@ -56,10 +49,7 @@ $(window).on('scroll', function () {
 	}
 });
 
-
-/*=============================================
-	=    		 Scroll Up  	         =
-=============================================*/
+// Scroll Up 
 if ($('.scroll-to-target').length) {
   $(".scroll-to-target").on('click', function () {
     var target = $(this).attr('data-target');
@@ -72,9 +62,7 @@ if ($('.scroll-to-target').length) {
 }
 
 
-/*=============================================
-	=             Main Slider                =
-=============================================*/
+//  Main Slider
 function mainSlider() {
 	var BasicSlider = $('.slider-active');
 	BasicSlider.on('init', function (e, slick) {
@@ -113,10 +101,7 @@ function mainSlider() {
 	}
 }
 
-
-/*=============================================
-	=         Up Coming Movie Active        =
-=============================================*/
+// Up Coming Movie Active 
 $('.ucm-active').owlCarousel({
 	loop: true,
 	margin: 30,
@@ -153,9 +138,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 });
 
 
-/*=============================================
-	=         Up Coming Movie Active        =
-=============================================*/
+// Up Coming Movie Active 
 $('.ucm-active-two').owlCarousel({
 	loop: true,
 	margin: 45,
@@ -195,10 +178,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	$(".ucm-active-two").trigger('refresh.owl.carousel');
 });
 
-
-/*=============================================
-	=    		Brand Active		      =
-=============================================*/
+// Brand Active
 $('.brand-active').slick({
 	dots: false,
 	infinite: true,
@@ -243,9 +223,7 @@ $('.brand-active').slick({
 });
 
 
-/*=============================================
-	=         Gallery-active           =
-=============================================*/
+// Gallery-active 
 $('.gallery-active').slick({
 	centerMode: true,
 	centerPadding: '350px',
@@ -312,9 +290,7 @@ $('.gallery-active').slick({
 	]
 });
 
-/*=============================================
-	=    		Odometer Active  	       =
-=============================================*/
+// Odometer Active
 $('.odometer').appear(function (e) {
 	var odo = $(".odometer");
 	odo.each(function () {
@@ -324,9 +300,7 @@ $('.odometer').appear(function (e) {
 });
 
 
-/*=============================================
-	=    		Magnific Popup		      =
-=============================================*/
+// Magnific Popup
 $('.popup-image').magnificPopup({
 	type: 'image',
 	gallery: {
@@ -340,9 +314,8 @@ $('.popup-video').magnificPopup({
 });
 
 
-/*=============================================
-	=    		Isotope	Active  	      =
-=============================================*/
+// Isotope	Active
+
 $('.tr-movie-active').imagesLoaded(function () {
 	// init Isotope
 	var $grid = $('.tr-movie-active').isotope({
@@ -366,10 +339,7 @@ $('.tr-movie-menu-active button').on('click', function (event) {
 	event.preventDefault();
 });
 
-
-/*=============================================
-	=    		 Aos Active  	         =
-=============================================*/
+// Aos Active  	 
 function aosAnimation() {
 	AOS.init({
 		duration: 1000,
@@ -380,9 +350,7 @@ function aosAnimation() {
 }
 
 
-/*=============================================
-	=    		 Wow Active  	         =
-=============================================*/
+// Wow Active
 function wowAnimation() {
 	var wow = new WOW({
 		boxClass: 'wow',
@@ -393,6 +361,7 @@ function wowAnimation() {
 	});
 	wow.init();
 }
+
 
 
 })(jQuery);
